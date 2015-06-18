@@ -9,12 +9,13 @@ btn_new.addEventListener("click", reset);
 
 var text;
 var words;
-var data=["1","2","3"];
+var data;
 var myInterval;
 
 function startReading(){
 	text=input.textContent;
 	words = text.split(" ");
+	data = ["1","2","3"];
 
 	input.style.display = "none";
 	btn_start.style.display = "none";
@@ -48,5 +49,6 @@ function reset(){
 	btn_start.style.display = "inline";
 	btn_new.style.display = "none";
 	word.textContent = "";
+	
 
 }
