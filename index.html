@@ -7,12 +7,29 @@
 </head>
 <body >
 	<textarea id="input"></textarea>
+	
+	<div class="radioBox" id="speedBox">
+		<input class="speedRadio" id="slow" type="radio" name="speed" value="350" >
+		<label class="radioLabel" for="slow">Slow</label>
+		<input class="speedRadio" id="normal" type="radio" name="speed" value="300" checked>
+		<label class="radioLabel" for="normal">Normal</label>
+		<input class="speedRadio" id="fast" type="radio" name="speed" value="250">
+		<label class="radioLabel" for="fast">Fast</label>
+		<input class="speedRadio" id="faster" type="radio" name="speed" value="200">
+		<label class="radioLabel" for="faster">Faster</label>
+	</div>
+	
 	<button id="start" class="dbtn">START</button>
 	<button id="new" class="dbtn">NEW</button>
 
+	
+	
 	<div id="wordBox">
 		<h1 id="word"></h3>
 	</div>
+	
+	
+	
 	<script src="script.js"></script>
 </body>
 </html>	

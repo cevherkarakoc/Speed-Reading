@@ -22,9 +22,38 @@ body{
 	background-color:#666;
 }
 
-#start{
+.radioBox input[type="radio"] {
+    display:none;
+}
+
+.radioBox label {
+    display:inline-block;
+    background-color:#222;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+}
+
+.radioBox input[type="radio"]:checked + label {
+    background-color:#888;
+}
+
+.radioBox{
+	height:20px;
+	width:280px;
+
 	position:absolute;
 	top:370px;
+	left:50%;
+	
+	font-size:18px;
+	
+	margin-left:-140px;
+}
+
+#start{
+	position:absolute;
+	top:420px;
 	left:50%;
 	
 	margin-left:-40px;
@@ -76,3 +105,4 @@ body{
 	text-align:center;
 	font-family: "Comic Sans MS", cursive , sans-serif;
 }
+
