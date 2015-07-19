@@ -47,7 +47,7 @@ body{
 	left:50%;
 	
 	font-size:18px;
-	
+	margin:25px;
 	margin-left:-140px;
 }
 
@@ -55,7 +55,7 @@ body{
 	position:absolute;
 	top:420px;
 	left:50%;
-	
+	margin:25px;
 	margin-left:-40px;
 }
 
@@ -63,7 +63,7 @@ body{
 	position:absolute;
 	top:25px;
 	left:50%;
-	
+	margin:25px;
 	margin-left:-40px;
 	
 	display : none;
@@ -82,14 +82,11 @@ body{
 	scrollbar-highlight-color: #444;
 	scrollbar-shadow-color: #888;
 	
-
-	width:500px;
+	margin:5%;
+	margin-top:25px;
+	width:90%;
 	height:300px;
-	position:absolute;
 	top:25px;
-	left:50%;
-	
-	margin-left:-250px;
 }
 
 #wordBox{
