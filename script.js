@@ -63,7 +63,7 @@ function showWords(){
 function reset(){
 	clearInterval(myInterval);
 	
-	body.style.backgroundColor = "black";
+	body.style.backgroundColor = "rgb(232, 233, 236)";
 	body.style.color = "white";
 	
 	input.style.display = "inline";
