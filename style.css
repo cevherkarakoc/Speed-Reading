@@ -20,31 +20,7 @@ body{
 	background-color:rgb(21, 205, 87);
 }
 
-.radioBox input[type="radio"] {
-    display:none;
-}
-
-.radioBox label {
-    display:inline-block;
-    background-color:rgb(66,94,151);
-	color:white;
-	
-	border:1px solid black;
-    padding:4px 11px;
-    font-family:Arial;
-    font-size:16px;
-	
-}
-
-.radioBox input[type="radio"]:checked + label {
-    background-color:rgb(139,161,235);
-	box-shadow:0 0 3px rgb(139,161,235);
-	border:white;
-}
-
-.radioBox{
-	height:20px;
-	width:280px;
+#settingBox{
 
 	position:absolute;
 	left:50%;
@@ -54,11 +30,13 @@ body{
 	margin-left:-140px;
 }
 
+#input_wpm{
+	text-align: right; 
+	width: 39px;
+}
+
 #start{
-	position:absolute;
-	top:520px;
-	left:50%;
-	margin-left:-40px;
+	margin-left:40px;
 }
 
 #new{
@@ -69,6 +47,10 @@ body{
 	margin-left:-40px;
 	
 	display : none;
+}
+
+label{
+	color:black;
 }
 
 #input{
@@ -92,6 +74,6 @@ body{
 
 #word{
 	text-align:center;
-	font-family: "Comic Sans MS", cursive , sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 

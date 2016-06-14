@@ -4,8 +4,8 @@ var wordBox = document.getElementById("wordBox");
 var input = document.getElementById("input");
 var btn_start = document.getElementById("start");
 var btn_new = document.getElementById("new");
-var speed_box = document.getElementById("speedBox");
-var radios = document.getElementsByName('speed');
+var speed_box = document.getElementById("settingBox");
+var input_wpm = document.getElementById('input_wpm');
 
 
 btn_start.addEventListener("click", startReading);
@@ -19,16 +19,11 @@ var speed;
 
 function startReading(){
 	text=input.textContent;
-	words = text.split(" ");
+	var separators = [' ', '\n'];
+	words = text.split(new RegExp(separators.join('|'),'g'));
 	data = ["1","2","3"];
 	
-	for (var i = 0, length = radios.length; i < length; i++) {
-		if (radios[i].checked) {
-			speed = radios[i].value;
-			console.log(speed);
-			break;
-		}
-	}
+	speed = 60*1000/input_wpm.value ;
 
 	body.style.backgroundColor = "white";
 	body.style.color = "black";
