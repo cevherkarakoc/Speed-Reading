@@ -53,7 +53,7 @@ label{
 	color:black;
 }
 
-#input{
+#input_text{
 	scrollbar-highlight-color: #fff;
 	
 	margin-left:5%;
@@ -74,6 +74,6 @@ label{
 
 #word{
 	text-align:center;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 

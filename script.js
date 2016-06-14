@@ -1,7 +1,7 @@
 var body = document.body;
 var word= document.getElementById("word");
 var wordBox = document.getElementById("wordBox");
-var input = document.getElementById("input");
+var input_text = document.getElementById("input_text");
 var btn_start = document.getElementById("start");
 var btn_new = document.getElementById("new");
 var speed_box = document.getElementById("settingBox");
@@ -18,7 +18,7 @@ var myInterval;
 var speed;
 
 function startReading(){
-	text=input.textContent;
+	text=input_text.value;
 	var separators = [' ', '\n'];
 	words = text.split(new RegExp(separators.join('|'),'g'));
 	data = ["1","2","3"];
@@ -28,7 +28,7 @@ function startReading(){
 	body.style.backgroundColor = "white";
 	body.style.color = "black";
 	
-	input.style.display = "none";
+	input_text.style.display = "none";
 	btn_start.style.display = "none";
 	speed_box.style.display = "none";
 	btn_new.style.display = "inline";
@@ -61,7 +61,7 @@ function reset(){
 	body.style.backgroundColor = "rgb(232, 233, 236)";
 	body.style.color = "white";
 	
-	input.style.display = "inline";
+	input_text.style.display = "inline";
 	btn_start.style.display = "inline";
 	speed_box.style.display = "inline";
 	btn_new.style.display = "none";
