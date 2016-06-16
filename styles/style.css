@@ -30,6 +30,17 @@ body{
 	margin-left:-140px;
 }
 
+#infoBox{
+
+	position:absolute;
+	left:50%;
+	top:490px;
+	font-size:16px;
+	margin:25px;
+	width: 400px;
+	margin-left:-200px;
+}
+
 #input_wpm{
 	text-align: right; 
 	width: 39px;
@@ -69,7 +80,7 @@ label{
 	position:absolute;
 	top:50%;
 	left:50%;
-	
+	outline: none;
 }
 
 #word{

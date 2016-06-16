@@ -7,19 +7,25 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fast Reader</title>
-	<link href="style.css" rel="stylesheet" />
+
+	<link href="styles/style.css" rel="stylesheet" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext,latin'
 	 rel='stylesheet' type='text/css'>
+
+	 <script src="scripts/testContent.js"></script>
 </head>
-<body >
+<body onkeydown ="keyDown(event)" >
 	<textarea id="input_text"></textarea>
 	
-	<div id="settingBox">
-	<input type="text" id="input_wpm" value="300" > <label>wpm</label>
-	<button id="start" class="dbtn">START</button>
-	
+	<div id="settingBox" >
+		<input type="text" id="input_wpm" value="300" > <label>wpm</label>
+		<button id="start" class="dbtn">START</button>
 	</div>
 	
+	<div id="infoBox" >
+		<p>Space: Pause , Arrow Keys : Next and Prev Word</p>
+	</div>
+
 	<button id="new" class="dbtn">NEW</button>
 
 	
@@ -31,6 +37,6 @@
 	
 	
 	
-	<script src="script.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 </html>	
