@@ -4,10 +4,10 @@ Sezar'ın evlatlık vârisi olan Augustus, Sezar adıyla çağrılmayı tercih e
 İç savaşlar yüzünden o güne kadar rastlanmamış sayılara ulaşan (50 civarında) Roma lejyonlarının sayısı 28'e düşürüldü. Özellikle içlerinde sadakatleri şüpheli olan bazı lejyonlar dağıtıldı. Bazıları Gemina (ikiz) unvanıyla birleştirildi.[1] Ayrıca Augustus göürnüşte İtalya'da barışı muhafaza edebilmek için dokuz özel cohortes oluşturdu ve bunların en azından üçünü Roma'da konuşlandırdı. Bu cohortes sonradan Praetorian muhafızları olarak bilinen birimler haline geldi.
 Octavianus otokrasi ve krallığın Romalıların yüzyıllardır tecrübe etmedikleri ve sakındıkları şeyler olduğunun farkındaydı. Octavianus bir tiran olarak görülmek istemiyordu ve anayasal cumhuriyet yanılgısını korumaya çalıştı. Roma Cumhuriyeti anayasasını hâlâ işlevselmiş gibi göstermeye çalıştı. Gaddar Lucius Cornelius Sulla gibi geçmişteki Roma diktatörleri bile Roma'yı asla bir, iki seneden fazla olmamak üzere kısa süreliğine yönetmişti (Jül Sezar haricinde). MÖ 27'de Octavianus resmen tüm tüm yetkilerini Roma senatosuna bırakmaya çalıştı. Dikkatlice kurgulanmış bir şekilde o sırada büyük bölümü kendi taraftarları olan senatörler bu teklifi teddettiler ve Roma cumhuriyeti ve halkının iyiliği için yetkileri elinde tutmaya devam etmesi için yalvardılar. Anlatılana göre Octavianus'un konsüllükten çekileceği önerisi Roma'daki plebler arasında isyanlara neden olmuştu. Senato ve Octavianus arasında "Birinci Uzlaşma" olarak bilinen bir anlaşma sağlandı. Bu anlaşma Augustus'u halkın otokratı olarak meşrulaştırdı ve bir tiran olarak görülmeyeceğini temin ederek Pax Romana olarak bilinen uzun dönemin başlangıcı oldu.`
 
-export default function (state=initialState,action) {
-    switch(action.type){
-        case "TEXT_CHANGED":
-            return action.newText;
-    }
-    return state;
+export default function (state = initialState, action) {
+  switch (action.type) {
+    case 'TEXT_CHANGED':
+      return action.newText
+  }
+  return state
 }

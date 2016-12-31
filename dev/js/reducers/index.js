@@ -1,10 +1,10 @@
-import {combineReducers} from "redux";
-import text from './text';
-import status from './status';
+import { combineReducers } from 'redux'
+import text from './text'
+import status from './status'
 
 const allReducers = combineReducers({
-    text,
-    status
+  text,
+  status
 })
 
-export default allReducers;
+export default allReducers

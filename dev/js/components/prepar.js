@@ -1,17 +1,17 @@
-import React from 'react';
-import Entrance from "../containers/entrance";
-import Info from "./info";
+import React from 'react'
+import Entrance from '../containers/entrance'
+import Info from './info'
 
 const Prepar = () => (
-    <div style={{
-        display:"flex",
+  <div style={{
+    display: 'flex',
     alignItems: 'center',
-    flexDirection:"column",
-    
-    }}>
-        <Entrance/>
-        <Info/>
-    </div>
-);
+    flexDirection: 'column'
 
-export default Prepar;
+  }}>
+    <Entrance />
+    <Info />
+  </div>
+)
+
+export default Prepar
