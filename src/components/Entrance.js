@@ -3,24 +3,25 @@ import React from 'react'
 const Entrance = ({text, wpm, setText, setWpm, startReading}) => {
   
     return (
-      <div style={{ width: '80%', marginTop: 25 }}>
-        <textarea placeholder='Text'
-          style={{ marginBottom: 25, width: '100%', height: 400 }}
+      <div className="container h-4/5 flex flex-col space-y-4 items-center mt-8">
+        <textarea
+          placeholder='Text'
+          className="w-full h-full border border-gray-500 rounded px-4 py-3 "
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
 
-        <div>
-          <div>
+        <div className="flex flex-row items-center space-x-2">
+          <span>
             Word per minute :
-          </div>
+          </span>
           <div>
-            <input type='text' placeholder='Word per Minute' style={{ width: 135, textAlign: 'right' }}
+            <input type='text' className="text-right w-24 border border-gray-500 rounded py-0.5 px-1" placeholder='Word per Minute'
               value={wpm} onChange={(e) => setWpm(e.target.value)} />
           </div>
 
           <div>
-            <button type='hollow-primary' onClick={() => startReading(text)}>Start</button>
+            <button className="px-4 py-1 bg-blue-600 focus:bg-blue-500 hover:bg-blue-400 text-white rounded" onClick={() => startReading(text)}>Start</button>
           </div>
         </div>
 

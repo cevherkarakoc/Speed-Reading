@@ -13,7 +13,7 @@ const App = () => {
   return isReadingMode
     ? <Reader text={text} wpm={wpm} backPrepar={() => setIsReadingMode(false)} />
     : (
-      <div>
+      <div className="h-screen flex flex-col items-center space-y-4">
         <Entrance 
           text={text}
           wpm={wpm}

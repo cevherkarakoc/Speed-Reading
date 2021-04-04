@@ -21,7 +21,7 @@ const Reader = ({text, wpm, backPrepar}) => {
   }, [text, wpm])
 
   return <div>
-    <button style={{ position: 'absolute', margin: 5 }} onClick={backPrepar}>New</button>
+    <button className="absolute m-4 px-4 py-1 bg-blue-600 focus:bg-blue-500 hover:bg-blue-400 text-white rounded" onClick={backPrepar}>New</button>
     <TheWord word={state.words[state.index]} pausePlay={pausePlay} />
     <Controller paused={state.paused} preWord={preWord} nextWord={nextWord} pausePlay={pausePlay} />
   </div>
