@@ -1,5 +1,6 @@
+import { useReducer } from "react"
+
 const initialState = {
-  readingMode: false,
   words: [],
   index: 0,
   interID: 0,
@@ -16,19 +17,18 @@ const interval = (callback, wpm) => {
   return inter
 }
 
-export default function (state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'START_READING':
       return Object.assign({}, state, {
-        readingMode: true,
         paused: true,
+        wpm: action.wpm,
         words: action.text.split(new RegExp(separators.join('|'), 'g')),
         index: 0
       })
-    case 'BACK':
+    case 'STOP_READING':
       clearInterval(state.interID)
       return Object.assign({}, state, {
-        readingMode: false,
         interID: 0
       })
     case 'NEXT_WORD':
@@ -45,7 +45,7 @@ export default function (state = initialState, action) {
         index: nextIndex,
         paused: newPaused
       })
-    case 'BACK_WORD':
+    case 'PRE_WORD':
       let prevIndex = state.index - 1
       if (prevIndex < 0) prevIndex = 0
       return Object.assign({}, state, {
@@ -61,10 +61,28 @@ export default function (state = initialState, action) {
         paused: !state.paused,
         interID: newinterID
       })
-    case 'WPM_CHANGED':
-      return Object.assign({}, state, {
-        wpm: action.newWpm
-      })
   }
   return state
+}
+
+export const useReader = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const preWord = () => dispatch({ type: 'PRE_WORD' });
+  const nextWord = () => dispatch({ type: 'NEXT_WORD' });
+  const pausePlay = () => dispatch({ type: 'PAUSE_PLAY', callback: nextWord });
+  const stopReading = () => dispatch({ type: 'STOP_READING' });
+  const startReading = (text, wpm) => dispatch({
+    type: 'START_READING',
+    text: text,
+    wpm: wpm
+  });
+
+  return [state, {
+    preWord,
+    nextWord,
+    pausePlay,
+    stopReading,
+    startReading,
+  }];
 }
