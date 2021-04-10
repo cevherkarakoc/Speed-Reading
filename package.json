@@ -1,7 +1,6 @@
 {
   "name": "speed-reading",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "parcel serve ./src/index.html",
     "build": "parcel build ./src/index.html --dist-dir ./docs"
