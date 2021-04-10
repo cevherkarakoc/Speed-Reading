@@ -21,6 +21,26 @@ const Reader = ({text, wpm, backPrepar}) => {
     }
   }, [text, wpm])
 
+  useEffect(() => {
+    const onKeyPress = (event) => {
+      switch (event.code) {
+        case 'Space':
+          pausePlay();
+          break;
+        case 'ArrowRight':
+          preWord();
+          break;
+        case 'ArrowLeft':
+          nextWord();
+          break;
+      }
+    }
+    document.addEventListener('keydown', onKeyPress);
+    return () => {
+      document.removeEventListener('keydown', onKeyPress)
+    }
+  }, [])
+
   return <div>
     <Button onClick={backPrepar} className="absolute m-4">New</Button>
     <TheWord word={state.words[state.index]} pausePlay={pausePlay} />
