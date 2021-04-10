@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button';
 
 const Entrance = ({text, wpm, setText, setWpm, startReading}) => {
   
@@ -21,7 +22,7 @@ const Entrance = ({text, wpm, setText, setWpm, startReading}) => {
           </div>
 
           <div>
-            <button className="px-4 py-1 bg-blue-600 focus:bg-blue-500 hover:bg-blue-400 text-white rounded" onClick={() => startReading(text)}>Start</button>
+            <Button onClick={() => startReading(text)}>Start</Button>
           </div>
         </div>
 
