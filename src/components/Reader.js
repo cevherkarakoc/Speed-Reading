@@ -27,10 +27,10 @@ const Reader = ({text, wpm, backPrepar}) => {
         case 'Space':
           pausePlay();
           break;
-        case 'ArrowRight':
+        case 'ArrowLeft':
           preWord();
           break;
-        case 'ArrowLeft':
+        case 'ArrowRight':
           nextWord();
           break;
       }
